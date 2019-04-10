@@ -14,15 +14,15 @@
     {% include head/custom.html %}
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" style="background-image: url('/assets/images/404.jpg'); background-size: cover; "> 
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}"> 
 
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
-<!--
-    <div class="initial-content">
+
+    <div style="initial-content" style="background-image: url('/assets/images/404.jpg') no-repeat; background-size: cover; height: 100%'">
       {{ content }}
     </div>
--->
+
     {% if site.search == true %}
       <div class="search-content">
         {% include_cached search/search_form.html %}
