@@ -15,19 +15,15 @@
 {% elsif page.header.overlay_image %}
   {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
 {% endif %}
-
 {% if page.header.overlay_filter contains "rgba" %}
   {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
 {% elsif page.header.overlay_filter %}
   {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
 {% endif %}
-
 {% if page.header.image_description %}
   {% assign image_description = page.header.image_description %}
 {% else %}
   {% assign image_description = page.title %}
 {% endif %}
-
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
-
   <div style="background-image: url('{{ img_path }}'); background-size:cover; height: auto; width:100%; flex-grow: 1; " alt="{{ image_description }}" class="page__hero-image" > <span style="margin:0 auto;"><b> 404 </b><br /> Page Not Found </span> </div>
