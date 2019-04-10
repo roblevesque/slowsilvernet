@@ -14,7 +14,7 @@
     {% include head/custom.html %}
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" style="background-image: url('/assets/images/404.jpg'); background-size: cover; ">
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" style="background-image: url('/assets/images/404.jpg'); background-size: cover; height: 100%; width:100%; ">
 
     {% include_cached browser-upgrade.html %}
 
